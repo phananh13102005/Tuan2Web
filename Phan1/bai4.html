@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Đăng Ký Thông Tin</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --ring: rgba(37, 99, 235, 0.25);
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: linear-gradient(180deg, var(--bg) 0%, #eef2ff 100%);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: #f8fafc;
+    }
+
+    .card-header h1 {
+      font-size: 1.25rem;
+      margin: 0 0 4px 0;
+    }
+
+    .card-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    form { padding: 20px 24px 24px; }
+
+    .field { margin-bottom: 16px; }
+
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .input, .select, .btn {
+      width: 100%;
+      border-radius: 12px; /* bo góc */
+    }
+
+    .input, .select {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      font-size: 1rem;
+      background: #fff;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .input:focus, .select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px var(--ring);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px; /* bo góc */
+      background: #fff;
+    }
+
+    .gender-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px dashed transparent;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .gender-option:hover {
+      background: #f3f4f6;
+      border-color: #e5e7eb;
+    }
+
+    .helper { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
+
+    .btn {
+      appearance: none;
+      border: 1px solid transparent;
+      padding: 12px 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      background: var(--primary);
+      color: #fff;
+      cursor: pointer;
+      transition: transform .05s ease, background .2s ease, box-shadow .2s ease;
+      box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+    }
+
+    .btn:hover { /* hover đổi màu */
+      background: var(--primary-hover);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 6px 16px rgba(37,99,235,0.25);
+    }
+
+    .footer { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 8px 0 4px; }
+
+    /* Responsive cải thiện khoảng cách trên màn hình nhỏ */
+    @media (max-width: 420px) {
+      .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-labelledby="title">
+    <div class="card-header">
+      <h1 id="title">Form đăng ký thông tin</h1>
+      <p>Nhập thông tin cơ bản và nhấn Gửi.</p>
+    </div>
+
+    <form action="#" method="post" novalidate>
+      <!-- Họ và tên -->
+      <div class="field">
+        <label for="fullName">Họ và tên</label>
+        <input class="input" type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A" required />
+      </div>
+
+      <!-- Email & Số điện thoại -->
+      <div class="row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" type="email" id="email" name="email" placeholder="ten@example.com" required />
+        </div>
+        <div class="field">
+          <label for="phone">Số điện thoại</label>
+          <input class="input" type="tel" id="phone" name="phone" placeholder="09xxxxxxxx" pattern="^(0|\+84)(\d){9,10}$" inputmode="tel" required />
+          <div class="helper">Chấp nhận 0xxxxxxxxx hoặc +84xxxxxxxxx</div>
+        </div>
+      </div>
+
+      <!-- Giới tính -->
+      <div class="field">
+        <label>Giới tính</label>
+        <div class="gender-group" role="radiogroup" aria-label="Giới tính">
+          <label class="gender-option">
+            <input type="radio" name="gender" value="male" required /> Nam
+          </label>
+          <label class="gender-option">
+            <input type="radio" name="gender" value="female" /> Nữ
+          </label>
+          <label class="gender-option">
+            <input type="radio" name="gender" value="other" /> Khác
+          </label>
+          <label class="gender-option">
+            <input type="radio" name="gender" value="no-answer" /> Không muốn trả lời
+          </label>
+        </div>
+      </div>
+
+      <!-- Nút gửi -->
+      <div class="field">
+        <button class="btn" type="submit">Gửi</button>
+      </div>
+
+      <div class="footer">* Các trường có dấu * là bắt buộc.</div>
+    </form>
+  </div>
+</body>
+</html>

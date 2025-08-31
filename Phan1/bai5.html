@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Liên Kết</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 24px;
+      justify-content: center; /* canh giữa menu */
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #374151;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .menu a:hover { /* đổi màu chữ khi hover */
+      color: #2563eb;
+    }
+
+    .menu a:active { /* gạch chân khi active */
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="about.html">Giới thiệu</a></li>
+      <li><a href="services.html">Dịch vụ</a></li>
+      <li><a href="contact.html">Liên hệ</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
