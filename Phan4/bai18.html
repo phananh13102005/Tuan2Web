@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Tin Tức</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .news-container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .news-item {
+      display: flex;
+      align-items: flex-start;
+      background: #fff;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .news-item img {
+      width: 250px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .news-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .news-content {
+      padding: 15px;
+    }
+
+    .news-content h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .news-content p {
+      margin: 0;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tin Tức Mới Nhất</h1>
+  <div class="news-container">
+    <div class="news-item">
+      <img src="https://via.placeholder.com/250x150" alt="Ảnh tin tức">
+      <div class="news-content">
+        <h2>Bài viết 1</h2>
+        <p>Đây là mô tả ngắn cho bài viết số 1, cung cấp thông tin nổi bật và hấp dẫn người đọc.</p>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <img src="https://via.placeholder.com/250x150" alt="Ảnh tin tức">
+      <div class="news-content">
+        <h2>Bài viết 2</h2>
+        <p>Đây là mô tả ngắn cho bài viết số 2, mang đến những thông tin mới mẻ và thú vị.</p>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <img src="https://via.placeholder.com/250x150" alt="Ảnh tin tức">
+      <div class="news-content">
+        <h2>Bài viết 3</h2>
+        <p>Đây là mô tả ngắn cho bài viết số 3, giúp người đọc nắm bắt nội dung chính nhanh chóng.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

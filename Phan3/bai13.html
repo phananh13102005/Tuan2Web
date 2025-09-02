@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Đặt Bàn Quán Ăn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .booking-form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    .booking-form h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #444;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #007bff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form class="booking-form">
+    <h2>Đặt Bàn</h2>
+    
+    <label for="date">Ngày</label>
+    <input type="date" id="date" required>
+    
+    <label for="time">Giờ</label>
+    <input type="time" id="time" required>
+    
+    <label for="people">Số người</label>
+    <select id="people" required>
+      <option value="">--Chọn số người--</option>
+      <option>1-2</option>
+      <option>3-5</option>
+      <option>6-10</option>
+      <option>Trên 10</option>
+    </select>
+    
+    <label for="request">Yêu cầu đặc biệt</label>
+    <textarea id="request" rows="3" placeholder="Ví dụ: cần phòng riêng, thêm ghế trẻ em..."></textarea>
+    
+    <button type="submit">Đặt Ngay</button>
+  </form>
+</body>
+</html>
+

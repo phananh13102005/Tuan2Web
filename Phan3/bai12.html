@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Khảo Sát Ý Kiến</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+    .survey-form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .option-group {
+      margin-bottom: 20px;
+    }
+    .option-group input {
+      margin-right: 8px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      resize: vertical;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <form class="survey-form">
+    <h2>Khảo Sát Ý Kiến</h2>
+    
+    <!-- Radio -->
+    <div class="option-group">
+      <label>Bạn có hài lòng với dịch vụ không?</label>
+      <input type="radio" name="satisfaction" value="yes"> Có <br>
+      <input type="radio" name="satisfaction" value="no"> Không
+    </div>
+    
+    <!-- Checkbox -->
+    <div class="option-group">
+      <label>Bạn quan tâm đến dịch vụ nào?</label>
+      <input type="checkbox" name="service" value="web"> Thiết kế Web <br>
+      <input type="checkbox" name="service" value="app"> Phát triển App <br>
+      <input type="checkbox" name="service" value="seo"> SEO Marketing
+    </div>
+    
+    <!-- Textarea -->
+    <div class="option-group">
+      <label>Góp ý thêm:</label>
+      <textarea placeholder="Nhập ý kiến của bạn..."></textarea>
+    </div>
+    
+    <button type="submit">Gửi khảo sát</button>
+  </form>
+</body>
+</html>
